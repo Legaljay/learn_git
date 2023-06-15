@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            transition: background-color .5s;
+            }
+
+            .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+            }
+
+            .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+            color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            }
+
+            #main {
+            transition: margin-left .5s;
+            }
+
+            @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+            }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <header>
+        <div class="row">
+            <div class="top-bar">
+                <div class="logo">
+                    <a href="index.html">KARDSPIPS</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="menu-bar">
+        <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        </div>
+
+        <ul class="navbar-list">
+            <li><a href="#"><i class="material-icons">home</i> Home</a></li>
+            <li><a href="#"><i class="material-icons">person</i> About</a></li>
+            <li><a href="#"><i class="material-icons">photo_library</i> Portfolio</a></li>
+            <li><a href="#"><i class="material-icons">contact_page</i> Contact</a></li>
+            <li><a href="#"><i class="material-icons">search</i> Search</a></li>
+          </ul>
+        <!-- <i class="material-icons">menu</i>
+        <a class="menu" href="#">menu</a>
+        <a class="menu" href="#">about</a>
+        <a class="menu" href="#">services</a>
+        <i class="material-icons">home</i>
+        <i class="material-icons jay">search</i> -->
+        <div class="navbar-search">
+            <button  class="navbar-toggle" onclick="openNav()">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+              document.body.style.backgroundColor = "white";
+            }
+            </script>
+    </div>
+    <!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+        <div class="intro-overlay"></div>	
+
+        <div class="intro-content">
+            <div class="row">
+
+                <div class="col-twelve">
+
+                    <h5>Hello, World.</h5>
+                    <h1>I'm Aremo Pipeloluwa Oluwatimileyin.</h1>
+
+                    <p class="intro-position">
+                        <span>Front-end Developer</span>
+                        <span>UI/UX Designer</span> 
+                    </p>
+
+                    <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+                </div>  
+                
+            </div>   		 		
+        </div> <!-- /intro-content --> 
+
+        <ul class="intro-social">        
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul> <!-- /intro-social -->      	
+
+    </section> <!-- /intro -->
+    <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+        <div class="row section-intro">
+            <div class="col-twelve">
+
+                <h5>About</h5>
+                <h1>Let me introduce myself.</h1>
+
+                <div class="intro-info">
+
+                    <img src="images/Pipi.jpg" alt="Profile Picture">
+
+                    <p class="lead">Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.</p>
+                </div>   			
+
+            </div>   		
+        </div> <!-- /section-intro -->
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full">
+
+                <h3>Profile</h3>
+                <p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+
+                <ul class="info-list">
+                    <li>
+                        <strong>Fullname:</strong>
+                        <span>Aremo Pipeloluwa Oluwatimileyin</span>
+                    </li>
+                    <li>
+                        <strong>Birth Date:</strong>
+                        <span>September 8, 1999</span>
+                    </li>
+                    <li>
+                        <strong>Job:</strong>
+                        <span>Freelancer, Frontend Developer</span>
+                    </li>
+                    <li>
+                        <strong>Website:</strong>
+                        <span>www.peculiarworth.com</span>
+                    </li>
+                    <li>
+                        <strong>Email:</strong>
+                        <span>aremopipeloluwa@gmail.com</span>
+                    </li>
+
+                </ul> <!-- /info-list -->
+
+            </div>
+
+            <div class="col-six tab-full">
+
+                <h3>Skills</h3>
+                <p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+
+                <ul class="skill-bars">
+                    <li>
+                        <div class="progress percent90"><span>90%</span></div>
+                        <strong>HTML5</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent85"><span>85%</span></div>
+                        <strong>CSS3</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent70"><span>70%</span></div>
+                        <strong>JQuery</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent95"><span>95%</span></div>
+                        <strong>PHP</strong>
+                    </li>
+                    <li>
+
+                        <div class="progress percent75"><span>75%</span></div>
+                        <strong>Wordpress</strong>
+                    </li>
+    
+                </ul> <!-- /skill-bars -->		
+
+            </div>
+
+        </div>
+
+        <div class="row button-section">
+            <div class="col-twelve">
+                <a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+                <a href="#" title="Download CV" class="button button-primary">Download CV</a>
+                <button onclick="openPDF()">Open PDF</button>
+            </div>   		
+        </div>
+
+    </section> <!-- /process-->    
+
+
+    <!-- resume Section
+    ================================================== -->
+    <section id="resume" class="grey-section">
+
+        <div class="row section-intro">
+            <div class="col-twelve">
+
+                <h5>Resume</h5>
+                <h1>More of my credentials.</h1>
+
+                <p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+
+            </div>   		
+        </div> <!-- /section-intro--> 
+
+        <div class="row resume-timeline">
+
+            <div class="col-twelve resume-header">
+
+                <h2>Work Experience</h2>
+
+            </div> <!-- /resume-header -->
+
+            <div class="col-twelve">
+
+                <div class="timeline-wrap">
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>UI Designer</h3>
+                            <p>July 2015 - Present</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>Awesome Studio</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Front-end Developer</h3>
+                            <p>July 2020 - June 2015</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>Super Cool Agency</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Web Designer</h3>
+                            <p>May 2013 - June 2014</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>Great Designs Studio</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                </div> <!-- /timeline-wrap -->   			
+
+            </div> <!-- /col-twelve -->
+            
+        </div> <!-- /resume-timeline -->
+        
+        <div class="row resume-timeline">
+
+            <div class="col-twelve resume-header">
+
+                <h2>Education</h2>
+
+            </div> <!-- /resume-header -->
+
+            <div class="col-twelve">
+
+                <div class="timeline-wrap">
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Master Degree</h3>
+                            <p>July 2015 - Present</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>University of Life</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Bachelor Degree</h3>
+                            <p>July 2014 - June 2015</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>State Design University</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Bachelor Degree</h3>
+                            <p>May 2013 - June 2014</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4>Design College</h4>
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+
+                    </div> <!-- /timeline-block -->
+
+                </div> <!-- /timeline-wrap -->   			
+
+            </div> <!-- /col-twelve -->
+            
+        </div> <!-- /resume-timeline -->
+        
+    </section> <!-- /features -->
+
+
+    <!-- Portfolio Section
+    ================================================== -->
+    <section id="portfolio">
+
+        <div class="row section-intro">
+            <div class="col-twelve">
+
+                <h5>Portfolio</h5>
+                <h1>Check Out Some of My Works.</h1>
+
+                <p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+
+            </div>   		
+        </div> <!-- /section-intro--> 
+
+        <div class="row portfolio-content">
+
+            <div class="col-twelve">
+
+                <!-- portfolio-wrapper -->
+            <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/liberty.jpg" alt="Liberty">
+                    <a href="#modal-01" class="overlay">	                  	           
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                        <h3 class="folio-title">Liberty</h3>	     					    
+                                        <span class="folio-types">
+                                            Graphic Design
+                                        </span>
+                                    </div>	                      	
+                        </div>                    
+                    </a>
+                    </div>	               
+                    </div> <!-- /folio-item -->
+
+                    <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/shutterbug.jpg" alt="Shutterbug">
+                        <a href="#modal-02" class="overlay">              		                  
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                <h3 class="folio-title">Shutterbug</h3>	     					    
+                                        <span class="folio-types">
+                                            Web Design
+                                        </span>		     		
+                                    </div> 	                      	
+                        </div>                    
+                    </a>
+                    </div>
+                    </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/clouds.jpg"alt="Clouds">
+                    <a href="#modal-03" class="overlay">             		                  
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                <h3 class="folio-title">Clouds</h3>	     					    
+                                        <span class="folio-types">
+                                            Web Design
+                                        </span>		     		
+                                    </div> 	                      	
+                        </div>                    
+                    </a>
+                    </div>
+                    </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/beetle.jpg" alt="Beetle">
+                    <a href="#modal-04" class="overlay">                  	                 
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                <h3 class="folio-title">Beetle</h3>	     					    
+                                        <span class="folio-types">
+                                            Branding
+                                        </span>		     		
+                                    </div>  	                      	
+                        </div>                    
+                    </a>
+                    </div>
+                    </div> <!-- /folio-item -->     
+
+                    <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
+                    <a href="#modal-05" class="overlay">             		                  
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                <h3 class="folio-title">Lighthouse</h3>	     					    
+                                        <span class="folio-types">
+                                            Web Development
+                                        </span>		     		
+                                    </div> 	                      	
+                        </div>                    
+                    </a>
+                    </div>
+                    </div> <!-- /folio-item -->
+
+                <div class="bgrid folio-item">
+                    <div class="item-wrap">
+                        <img src="images/portfolio/salad.jpg" alt="Salad">
+                    <a href="#modal-06" class="overlay">
+                        <div class="folio-item-table">
+                            <div class="folio-item-cell">
+                                <h3 class="folio-title">Salad</h3>	     					    
+                                        <span class="folio-types">
+                                            Branding
+                                        </span>		     		
+                                    </div>	                      	
+                        </div>                    
+                    </a>
+                    </div>
+                    </div> <!-- /folio-item -->   
+
+                <!-- modal popups - begin
+                ============================================================= -->
+                <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-liberty.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Liberty</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Web Development</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-01 -->
+
+                    <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Shutterbug</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Web Design</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-02 -->
+
+                    <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-clouds.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Clouds</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Web Design</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-03 -->
+
+                    <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Beetle</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Branding</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-04 -->
+
+                    <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Lighthouse</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Web Development</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-05 -->
+
+                    <div id="modal-06" class="popup-modal slider mfp-hide">	
+
+                        <div class="media">
+                            <img src="images/portfolio/modals/m-salad.jpg" alt="" />
+                        </div>      	
+
+                        <div class="description-box">
+                        <h4>Salad</h4>		      
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+                        <div class="categories">Branding</div>			               
+                        </div>
+
+                    <div class="link-box">
+                        <a href="http://www.behance.net">Details</a>
+                        <a href="#" class="popup-modal-dismiss">Close</a>
+                    </div>		      
+
+                    </div> <!-- /modal-06 -->
+
+
+                    <!-- modal popups - end
+                ============================================================= -->
+
+            </div> <!-- /portfolio-wrapper --> 
+
+            </div>  <!-- /twelve -->   
+
+        </div> <!-- /portfolio-content --> 
+        
+    </section> <!-- /portfolio --> 
+        <!-- footer
+    ================================================== -->
+
+   <footer>
+    <div class="row">
+
+        <div class="col-six tab-full pull-right social">
+
+            <ul class="footer-social">        
+             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+             <li><a href="#"><i class="fa fa-behance"></i></a></li>
+             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul> 
+             
+     </div>
+
+     <div class="col-six tab-full">
+         <div class="copyright">
+               <span>© Copyright Kards 2016.</span> 
+               <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+            </div>		                  
+         </div>
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+
+     </div> <!-- /row -->     	
+    </footer>  
+    <div class="custom-shape-divider-bottom-1686594781">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+    </div>
+</div>
+
+
+</body>
+</html>
