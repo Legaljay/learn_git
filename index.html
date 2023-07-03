@@ -8,113 +8,169 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
+
         body{
             margin: 0;
             padding: 0;
-            background: grey;
         }
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* grid-template-areas: "picture navbar" "picture content" "picture footer"; */
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+        }
+
+        .item1{
+            grid-row: span 3;
+            background-color: hsl(257.14,9.59%,14.31%);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .item2{
+            grid-row: span 3;
+            background: hsl(346.25,20.87%,54.9%);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 10fr 1fr;
+        }
+
+        .nav{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav ul{
+            display: flex;
+            gap: 10px;
+            margin: 0; /* Remove the left margin */
+            padding: 0; /* Add padding to adjust spacing */
+        }
+
         li{
             list-style-type: none;
-        
         }
         a{
             text-decoration: none;
             font-size: 1.4em;
             padding: 10px;
-            color: grey;
+            color: hsl(257.14,9.59%,14.31%);
         }
-        nav {
-            background-color: black;
+
+        a:hover {
+            background: hsl(257.14,9.59%,14.31%);
+            color: hsl(346.25,20.87%,54.9%);
         }
-        nav>ul{
-            display: flex;
-            flex-direction: row;
-            padding: 2em;
-            margin: 0;
-        }
-        footer {
-            background: black;
-        }
-        legend{
+
+        .content{
+            justify-self: center;
+            align-self: center;
             text-align: center;
-            font-size: 20px;
+            color: hsl(257.14,9.59%,14.31%);
         }
-        fieldset>img {
-            width: 30%;
-            height:30%;
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            align-content: center;
         }
-        #About{
+
+        .social ul{
             display: flex;
-            flex-direction: row;
-    
-            
-        }
-        .row>ul{
-            display: flex;
-            flex-direction: row;
+            gap: 10px;
             justify-content: center;
+            margin: 0;
             padding: 0;
         }
 
-        .copyright{
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-        }
-        .copyright>span{
-            color: grey;
-            padding: 10px;
+        /* Media Query for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Change to a single column layout */
+                grid-template-rows: 1fr 2fr; /* Adjust the number of rows */
+                height: auto; /* Remove the fixed height */
+            }
+            .item1{
+            grid-row: 1/2;
+            }
+
+            .nav ul{
+                font-size: x-large;
+            }
+            .item2 {
+                grid-row: auto; /*Reset grid-row property */
+            }
+
+            .content{
+                text-align: center;
+                justify-content: center;
+            }
+            .content>h1{
+                font-size: 50px;
+            }
+            .content p{
+                font-size: x-large;
+            }
+
+            .social ul{
+                font-size: 30px;
+            }
+
+            .nav ul {
+                flex-wrap: wrap; /* Allow the navigation items to wrap */
+                justify-content: center; /* Center align the navigation items */
+            }
         }
     </style>
 </head>
 <body>
-    <!-- This is the navigation section -->
-    <nav>
-        <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Work">Work</a></li>
-        <li><a href="#Resume">Resume</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!---created a form section with subsections--->
-    <form>
-        <fieldset id="About">
-            <legend>About</legend>
-            <img src="MyAvatar.png" alt="MyAvatar">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore nisi corrupti delectus, officia totam magni neque aperiam magnam cum soluta minus excepturi provident? Inventore atque magni vero officia vitae?</p>
-            
-        </fieldset>
-        <fieldset id="Work">
-            <legend>Work</legend>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam nemo eligendi placeat excepturi, ab exercitationem rerum voluptatum dolore non sapiente alias animi reprehenderit debitis in hic expedita suscipit distinctio aliquid!</p>
-        </fieldset>
-        <fieldset id="Resume">
-            <legend>Resume</legend>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quaerat fuga illo voluptas incidunt illum veniam consequatur, ducimus cumque voluptatem earum dolorum, consequuntur ut beatae rerum at voluptatibus! Adipisci, eaque?</p>
-        </fieldset>
-        <fieldset id="Resume">
-            <legend>Contact</legend>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab inventore ad exercitationem officia quae! Repellat ex quaerat quis, assumenda odit repellendus possimus sit cumque officiis animi obcaecati ipsam similique eligendi.</p>
-        </fieldset>
-    </form>
-    <!---The footer section--->
-    <footer>
-            <div class="row">
-                <ul>        
-                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul> 
+    <div class="container">
+     <!---This is the logo section--->
+        <div class="item1">
+            <img src="images/myPortfolioLogo-removebg-preview.png" alt="Portfolio_logo">
+        </div>
+<!-- This is the navigation section -->
+        <div class="item2">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#Work">Work</a></li>
+                    <li><a href="#Resume">Resume</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
             </div>
-
-            <div class="copyright">
-                <span>© Copyright Legal 2023.</span> 	         		                  
+             <!---This is the main section--->
+            <div class="content">
+                <h1>Welcome to my portfolio!</h1>
+                <p>Explore my creative journey through design, art, and innovation. <br>
+                    Let's connect and bring your ideas to life.
+                </p>
             </div>
-    </footer>
+             <!---The footer section--->
+            <div class="footer">
+                <div class="social">
+                    <ul>        
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul> 
+                </div>
+                <div class="copyright">
+                    <p>© Copyright Legal 2023.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
